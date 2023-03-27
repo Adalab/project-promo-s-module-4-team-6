@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import ls from '../services/localStorage'
 import '../styles/App.scss';
 import user from '../images/user.png';
 import Profile from './Profile';
+
 
 
 
@@ -17,6 +18,7 @@ const Landing = () => {
   const renderCardLanding = () => {
     return cardLanding.map((eachCard, i) => {
       return (
+      <NavLink to={`/detailcard/${eachCard.i}`}>
         <li className="li--items" key={i}>
           <section className='landing--autor'>
             <section className='info--project'>
@@ -47,6 +49,7 @@ const Landing = () => {
           </section>
           <i onClick={handleClickDeleteCard} class=" btn--delete__landing fa-solid fa-trash-can"></i>
         </li>
+      </NavLink>
       )
     })
   }
