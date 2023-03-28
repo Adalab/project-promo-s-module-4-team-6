@@ -161,26 +161,30 @@
   border-radius: 40px;
 }
 
+.section_buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
 .btn--project {
  
-    margin-bottom: 10px;
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    align-items: center;  
+    margin-top: 10px;
     color: white;
     text-align: center;
+    text-decoration: none;
     border: none;
     padding: 0 5px;
     height: 43px;
-   
+    background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
     border-radius: 40px;
-    text-decoration: none;
-    padding-top: 10px;
-    @include tablet {
-      margin-top: 15px;
-      position: absolute;
-      margin-left: 20px;
-      background-color: $colorDarkPurple;
-      color: white;
-      padding: 10px;
-    }
+
+  
 
 }
 .detail__link {

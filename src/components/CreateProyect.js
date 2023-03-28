@@ -71,9 +71,9 @@ const CreateProyect = () => {
           setUrl(info.cardURL);
 
           const storedCardList = ls.get('cardList', []);
+          data.id = crypto.randomUUID();
           storedCardList.push(data);
           ls.set('cardList', storedCardList);
-
 
         }
       })
@@ -102,23 +102,28 @@ const CreateProyect = () => {
   }
 
   return (
-    <main className='main'>
-      <NavLink className='btn--project' to='/'><i class="detail__link fa-sharp fa-solid fa-arrow-left"></i>Ver proyectos</NavLink>
+    <main>
+      <section className='section_buttons'>
+        <NavLink className='btn--project' to='/'><i className="detail__link fa-sharp fa-solid fa-arrow-left"></i>Ver proyectos</NavLink>
+      </section>
 
-      <Preview data={data} />
-      <Form
-        updateAvatar={updateAvatar}
-        updateCover={updateCover}
-        handleSubmit={handleSubmit}
-        data={data}
-        handleInputs={handleInputs}
-        errorRepo={errorRepo}
-        errorDemo={errorDemo}
-        handleClickCreateCard={handleClickCreateCard}
-        errorMsjBtn={errorMsjBtn}
-        url={url}
-        handleClickReset={handleClickReset}
-      />
+      <section className='main'>
+        <Preview data={data} />
+        <Form
+          updateAvatar={updateAvatar}
+          updateCover={updateCover}
+          handleSubmit={handleSubmit}
+          data={data}
+          handleInputs={handleInputs}
+          errorRepo={errorRepo}
+          errorDemo={errorDemo}
+          handleClickCreateCard={handleClickCreateCard}
+          errorMsjBtn={errorMsjBtn}
+          url={url}
+          handleClickReset={handleClickReset}
+        />
+
+      </section>
     </main>
   )
 }

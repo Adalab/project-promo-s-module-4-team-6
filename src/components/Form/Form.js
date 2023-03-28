@@ -3,6 +3,7 @@ import Input from "./Input"
 import TextArea from "./TextArea"
 import GetAvatar from '../GetAvatar';
 import ButtonReset from './ButtonReset'
+import { NavLink } from "react-router-dom";
 
 const Form = ({ handleSubmit, data, handleInputs, errorRepo, errorDemo, handleClickCreateCard, errorMsjBtn, url, updateAvatar, updateCover, handleClickReset }) => {
   return (
@@ -93,7 +94,7 @@ const Form = ({ handleSubmit, data, handleInputs, errorRepo, errorDemo, handleCl
 
       <section >
         <p className="card"> {errorMsjBtn} </p>
-        <a className="error--msj" href={url} target="_blank" rel="noreferrer"> {url}</a>
+        <NavLink className="error--msj" href={url} target="_blank" rel="noreferrer"> {url}</NavLink>
       </section>
       <ButtonReset handleClickReset={handleClickReset} />
 

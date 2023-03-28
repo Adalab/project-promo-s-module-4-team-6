@@ -2,6 +2,7 @@
 import Profile from './Profile';
 import cover from '../images/cover.jpeg';
 import user from '../images/user.png';
+import { NavLink } from 'react-router-dom';
 
 const Preview = ({ data }) => {
   return (
@@ -23,8 +24,8 @@ const Preview = ({ data }) => {
               <p className='info--project__technologies-text'>{data.technologies || 'React JS, MongoDB'}</p>
             </div>
             <div className='wrap--icon'>
-              <a href={data.demo} target="_blank" rel="noreferrer"><i className='fa-solid fa-globe info--project__technologies-icon1'></i></a>
-              <a href={data.repo} target="_blank" rel="noreferrer"><i className='fa-brands fa-github info--project__technologies-icon1'></i></a>
+              <NavLink href={data.demo} target="_blank" rel="noreferrer"><i className='fa-solid fa-globe info--project__technologies-icon1'></i></NavLink>
+              <NavLink href={data.repo} target="_blank" rel="noreferrer"><i className='fa-brands fa-github info--project__technologies-icon1'></i></NavLink>
             </div>
           </section>
         </section>
