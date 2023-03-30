@@ -104,7 +104,7 @@ const CreateProyect = () => {
   return (
     <main>
       <section className='section_buttons'>
-        <NavLink className='btn--project' to='/'><i className="detail__link fa-sharp fa-solid fa-arrow-left"></i>Ver proyectos</NavLink>
+        <NavLink className='btn--project btn--backprojects' to='/'><i className="detail__link fa-sharp fa-solid fa-arrow-left"></i>Ver proyectos</NavLink>
       </section>
 
       <section className='main'>
