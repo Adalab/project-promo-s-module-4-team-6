@@ -17,7 +17,7 @@ const DetailCard = () => {
 
 
   // NOS QUEDAMOS POR AQUÍ
-  const cardFound = dataDetail.find((card) => card.id === cardId);
+  const cardFound = dataDetail.find((card) => card.id_project === parseInt(cardId));
 
   if (cardFound !== undefined) {
 

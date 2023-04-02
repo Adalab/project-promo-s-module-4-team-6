@@ -28,7 +28,7 @@ const Landing = () => {
     if (cardLanding.length > 0) {
       return cardLanding.map((eachCard, i) => {
         return (
-          <NavLink className='link--navlink' key={i} to={`/detailcard/${eachCard.id}`}>
+          <NavLink className='link--navlink' key={i} to={`/detailcard/${eachCard.id_project}`}>
             <li className="li--items" >
               <section className='landing--autor'>
                 <section className='info--project'>
