@@ -65,7 +65,7 @@ const CreateProyect = () => {
     api.dataApi(data)
       .then((info) => {
         if (!info.success) {
-          setErrorMsjBtn("*Debes completar todos los campos");
+          setErrorMsjBtn(info.error);
         } else {
           setErrorMsjBtn("La tarjeta ha sido creada:")
           setUrl(info.cardURL);

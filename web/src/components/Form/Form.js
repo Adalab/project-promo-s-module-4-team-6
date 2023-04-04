@@ -94,7 +94,7 @@ const Form = ({ handleSubmit, data, handleInputs, errorRepo, errorDemo, handleCl
 
       <section >
         <p className="card"> {errorMsjBtn} </p>
-        <a className="error--msj" href={url} target="_blank" rel="noreferrer"> {url}</a>
+        <NavLink className="error--msj" href={url} target="_blank" rel="noreferrer"> {url}</NavLink>
       </section>
       <ButtonReset handleClickReset={handleClickReset} />
 
