@@ -5,6 +5,8 @@ const mysql = require('mysql2/promise');
 const server = express();
 server.use(cors());
 server.use(express.json({ limit: '10mb' }));
+server.set('view engine', 'ejs');
+server.use(express.static('./publish-react'));
 
 const serverPort = 4000;
 
@@ -165,4 +167,19 @@ server.post('/api/projects/add', (req, res) => {
           });
       });
   }
+})
+
+server.get('/api/projects/detail/:projectId', (req, res) => {
+  const projectId = req.params.projectId;
+  const sql = 'SELECT * FROM projects, autors WHERE projects.fkAutors = autors.id_autor AND id_project = ?';
+
+  connection
+    .query(sql, [projectId])
+    .then(([results, fields]) => {
+      console.log(results[0])
+      res.render('project_detail', results[0]);
+    })
+    .catch((err) => {
+      throw err;
+    });
 })

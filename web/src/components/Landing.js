@@ -28,7 +28,7 @@ const Landing = () => {
     if (cardLanding.length > 0) {
       return cardLanding.map((eachCard, i) => {
         return (
-          <NavLink className='link--navlink' key={i} to={`/detailcard/${eachCard.id_project}`}>
+          <a className='link--navlink' key={i} href={`/api/projects/detail/${eachCard.id_project}`}>
             <li className="li--items" >
               <section className='landing--autor'>
                 <section className='info--project'>
@@ -59,7 +59,7 @@ const Landing = () => {
               </section>
               <i onClick={handleClickDeleteCard} className=" btn--delete__landing fa-solid fa-trash-can"></i>
             </li>
-          </NavLink>
+          </a>
         )
       })
     } else {
