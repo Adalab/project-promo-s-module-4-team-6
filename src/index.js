@@ -169,7 +169,7 @@ server.post('/api/projects/add', (req, res) => {
   }
 })
 
-server.get('/api/projects/detail/:projectId', (req, res) => {
+server.get('/api/projects/:projectId', (req, res) => {
   const projectId = req.params.projectId;
   const sql = 'SELECT * FROM projects, autors WHERE projects.fkAutors = autors.id_autor AND id_project = ?';
 
