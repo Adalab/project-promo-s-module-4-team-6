@@ -10,6 +10,14 @@ server.use(express.static('./publish-react'));
 
 const serverPort = process.env.PORT || 4000;
 
+//Documentación de API
+const swaggerUi = require('swagger-ui-express');
+const swaggerFile = require('./swagger.json');
+//Especificar en el server use
+server.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+
+
+
 // Define en qué puerto escucha el servidor de backend las peticiones: 
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
