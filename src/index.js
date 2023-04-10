@@ -8,7 +8,7 @@ server.use(express.json({ limit: '10mb' }));
 server.set('view engine', 'ejs');
 server.use(express.static('./publish-react'));
 
-const serverPort = 4000;
+const serverPort = process.env.PORT || 4000;
 
 // Define en qué puerto escucha el servidor de backend las peticiones: 
 server.listen(serverPort, () => {
