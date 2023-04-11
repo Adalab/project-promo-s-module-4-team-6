@@ -1,12 +1,32 @@
-# Proyecto 3. Gestor de proyectos molones
+# Proyectos molones 😎
 
-En este proyecto vamos a realizar una aplicación web que nos permite crear una página para hablar sobre un proyecto personal o un proyecto que nos mole mucho. En la página web podemos introducir los datos del proyecto y obtener una vista maquetada con esta información.
+¡Hola a tod@s! Somos el equipo 6 de la promoción Salas de Adalab formado por Laura Caurín, Olga Parras, Alexandra Campo y Natalia Puerta.
+En este proyecto hemos realizado una aplicación web que nos permite crear una página para mostrar nuestros proyectos personales o un proyecto que nos mole mucho. 
 
-## Tecnologías utilizadas
+## Partes de nuestra web 💻
 
-- Uso de Sass para los estilos.
-- Uso de mediaqueries para que el diseño sea adaptable al dispositivo
-- Uso de React para la estructuración en componentes de la aplicación
-- Desarrollo usando la estrategia Mobile First
-- Uso de git para el control de versiones del proyecto, con ramas y pull-requests para revisar los cambios de las compañeras
-- Publicación del resultado en Internet usando GitHub Pages
+- Se compone de una landing de bienvenida donde se mostraran las tarjetas de los proyectos que la usuaria ha creado con anterioridad. En el caso de no tener ninguna, se visualizaran por defecto unas plantillas de muestra. 
+- Una página compuesta por un formulario donde la usuaria podrá crear una tarjeta nueva con los datos de un nuevo proyecto.
+
+## Herramientas utilizadas 🛠️
+
+- HTML 
+- SASS / SCSS 
+- REACT
+- EXPRESS
+- NODE JS
+- GULP 
+- GIT / GITHUB 
+- VISUAL STUDIO CODE (VSC) 
+- MYSQL WORKBENCH
+- ZEPLIN
+- POSTMAN
+
+## Miembros del equipo 👩🏻‍💻
+
+- Laura Caurín
+- Olga Parras
+- Alexandra Campo
+- Natalia Puerta
+
+Muchas gracias y esperamos que os guste!!
