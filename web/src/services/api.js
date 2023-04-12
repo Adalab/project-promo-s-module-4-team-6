@@ -1,5 +1,5 @@
 const dataApi = (data) => {
-  return fetch('http://localhost:4000/api/projects/add',
+  return fetch('http://localhost:4001/api/projects/add',
     {
       method: 'POST',
       body: JSON.stringify(data),
@@ -11,7 +11,7 @@ const dataApi = (data) => {
 }
 
 const listProjectsApi = () => {
-  return fetch('http://localhost:4000/api/projects/all')
+  return fetch('http://localhost:4001/api/projects/all')
     .then(response => response.json())
     .then(data => {
       return data.projects;

@@ -3,7 +3,7 @@
     "info": {
       "version": "1.0.0",
       "title": "My User Project CRUD",
-      "description": "My User Project Application API",
+      "description": "My User Project Application API"
     },
     "host": "localhost:4000",
     "basePath": "/",
@@ -87,8 +87,6 @@
               }
             }
           }
-    //AÑADIR " PATHS DEL ALL Y ID PROYECT
-    
     },
     "schemes": ["http"],
     "consumes": ["application/json"],

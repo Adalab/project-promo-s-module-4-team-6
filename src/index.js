@@ -6,13 +6,14 @@ const server = express();
 server.use(cors());
 server.use(express.json({ limit: '10mb' }));
 server.set('view engine', 'ejs');
-server.use(express.static('./publish-react'));
+const pathServerPublicStyles = './src/public-css';
+server.use(express.static(pathServerPublicStyles));
 
-const serverPort = process.env.PORT || 4000;
+const serverPort = process.env.PORT || 4001;
 
 //Documentación de API
 const swaggerUi = require('swagger-ui-express');
-const swaggerFile = require('./swagger.json');
+const swaggerFile = require('../swagger.json');
 //Especificar en el server use
 server.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
@@ -85,8 +86,8 @@ server.get('/api/projects/all', (req, res) => {
 });
 
 server.post('/api/projects/add', (req, res) => {
+  console.log('hola')
   const data = req.body;
-  console.log(data)
   if (data.name === '') {
     res.json({
       success: false,
@@ -166,7 +167,7 @@ server.post('/api/projects/add', (req, res) => {
           .then(([results, fields]) => {
             let response = {
               'success': true,
-              'cardURL': `http://localhost:4000/api/projects/${results.insertId}`,
+              'cardURL': `http://localhost:4001/api/projects/${results.insertId}`,
             }
             res.json(response);
           })
@@ -191,3 +192,4 @@ server.get('/api/projects/:projectId', (req, res) => {
       throw err;
     });
 })
+server.use(express.static('./publish-react'));
