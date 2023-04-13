@@ -168,7 +168,7 @@ server.post('/api/projects/add', (req, res) => {
           .then(([results, fields]) => {
             let response = {
               'success': true,
-              'cardURL': `${serverUrl}${results.insertId}`,
+              'cardURL': `${serverUrl}/api/projects/${results.insertId}`,
             }
             res.json(response);
           })
