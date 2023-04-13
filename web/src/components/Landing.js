@@ -28,7 +28,8 @@ const Landing = () => {
     if (cardLanding.length > 0) {
       return cardLanding.map((eachCard, i) => {
         return (
-          <a className='link--navlink' key={i} href={`http://localhost:4001/api/projects/${eachCard.id_project}`}>
+          //https://proyectos-molones-team-6.onrender.com/api/projects/${eachCard.id_project}
+          <a className='link--navlink' key={i} href={`https://proyectos-molones-team-6.onrender.com/api/projects/${eachCard.id_project}`}>
             <li className="li--items" >
               <section className='landing--autor'>
                 <section className='info--project'>

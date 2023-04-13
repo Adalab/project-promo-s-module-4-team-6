@@ -52,9 +52,9 @@ mysql
   });
 
 // Definimos un endpoint (/) para poder utilizar con el método GET. Y así en el navegador cuando ponemos http://localhost:4000/ recibimos el mensaje "Hola Adalabers!".
-server.get('/', (req, res) => {
-  res.send("Hola Adalabers!");
-});
+// server.get('/', (req, res) => {
+//   res.send("Hola Adalabers!");
+// });
 
 // Definimos un endpoint para poder utilizar con el método GET. Y si ponemos en el navegador http://localhost:4000/api/projects/all funciona = no nos da un error 404:
 server.get('/api/projects/all', (req, res) => {
@@ -167,7 +167,7 @@ server.post('/api/projects/add', (req, res) => {
           .then(([results, fields]) => {
             let response = {
               'success': true,
-              'cardURL': `http://localhost:4001/api/projects/${results.insertId}`,
+              'cardURL': `https://proyectos-molones-team-6.onrender.com/api/projects/${results.insertId}`,
             }
             res.json(response);
           })
