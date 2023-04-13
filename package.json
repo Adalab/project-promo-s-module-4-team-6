@@ -7,7 +7,7 @@
     "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
-    "build": "react-scripts build"
+    "publish-react": "cd web && npm run build && cd .. && rm -rf ./src/publish-react && mv ./web/build ./src/publish-react"
   },
   "repository": {
     "type": "git",
