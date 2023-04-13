@@ -10,7 +10,7 @@ const pathServerPublicStyles = './src/public-css';
 server.use(express.static(pathServerPublicStyles));
 
 const serverPort = process.env.PORT || 4000;
-const serverUrl = process.env.NODE_ENV === 'production' ? 'https://proyectos-molones-team-6.onrender.com' : `http://localhost:${serverPort}`;
+// const serverUrl = process.env.NODE_ENV === 'production' ? 'https://proyectos-molones-team-6.onrender.com' : `http://localhost:${serverPort}`;
 
 //Documentación de API
 const swaggerUi = require('swagger-ui-express');
@@ -22,7 +22,7 @@ server.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 // Define en qué puerto escucha el servidor de backend las peticiones: 
 server.listen(serverPort, () => {
-  console.log(`Server listening at ${serverUrl}`);
+  console.log(`Server listening at http://localhost:4000`);
 });
 
 let connection;
@@ -168,7 +168,7 @@ server.post('/api/projects/add', (req, res) => {
           .then(([results, fields]) => {
             let response = {
               'success': true,
-              'cardURL': `${serverUrl}/api/projects/${results.insertId}`,
+              'cardURL': `http://localhost:4000/api/projects/${results.insertId}`,
             }
             res.json(response);
           })

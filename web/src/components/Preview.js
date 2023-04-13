@@ -7,7 +7,8 @@ import { NavLink } from 'react-router-dom';
 const Preview = ({ data }) => {
   return (
     <section className='preview'>
-      <Profile className='preview--image' defaultAvatar={cover} avatar={data.photo} />
+
+      <Profile className='preview--image' defaultAvatar={user} avatar={data.image} />
 
       <section className='preview--autor'>
         <section className='info--project'>
@@ -31,7 +32,7 @@ const Preview = ({ data }) => {
         </section>
 
         <section className='info--autor'>
-          <Profile className='info--autor__image' defaultAvatar={user} avatar={data.image} />
+          <Profile className='info--autor__image' defaultAvatar={cover} avatar={data.photo} />
           <p className='info--autor__job'>{data.job || 'Full Stack Developer'}</p>
           <p className='info--autor__name'>{data.autor || 'Emmelie Björklund'}</p>
         </section>

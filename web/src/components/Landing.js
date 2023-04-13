@@ -6,8 +6,8 @@ import Profile from './Profile';
 import api from '../services/api'
 import { useState, useEffect } from "react";
 
-const serverPort = process.env.PORT || 4000;
-const serverUrl = process.env.NODE_ENV === 'production' ? 'https://proyectos-molones-team-6.onrender.com' : `http://localhost:${serverPort}`;
+// const serverPort = process.env.PORT || 4000;
+// const serverUrl = process.env.NODE_ENV === 'production' ? 'https://proyectos-molones-team-6.onrender.com' : `http://localhost:${serverPort}`;
 
 
 const Landing = () => {
@@ -32,7 +32,7 @@ const Landing = () => {
       return cardLanding.map((eachCard, i) => {
         return (
           //https://proyectos-molones-team-6.onrender.com/api/projects/${eachCard.id_project}
-          <a className='link--navlink' key={i} href={`${serverUrl}/api/projects/${eachCard.id_project}`}>
+          <a className='link--navlink' key={i} href={`http://localhost:4000/api/projects/${eachCard.id_project}`}>
             <li className="li--items" >
               <section className='landing--autor'>
                 <section className='info--project'>

@@ -77,13 +77,13 @@ const Form = ({ handleSubmit, data, handleInputs, errorRepo, errorDemo, handleCl
 
       <section className="buttons-img1">
         <GetAvatar
-          btnText='Subir foto del proyecto'
+          btnText='Subir foto de la autora'
           updateAvatar={updateAvatar}
           className='btn' />
 
         <GetAvatar
           updateAvatar={updateCover}
-          btnText='Subir foto de la autora'
+          btnText='Subir foto del proyecto'
           className='btn' />
       </section>
 
