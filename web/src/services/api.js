@@ -1,5 +1,8 @@
+const serverUrl = process.env.NODE_ENV === 'production' ? 'https://proyectos-molones-team-6.onrender.com/' : `http://localhost:${serverPort}`;
+
+
 const dataApi = (data) => {
-  return fetch('https://proyectos-molones-team-6.onrender.com/api/projects/add',
+  return fetch(`${serverUrl}/api/projects/add`,
     {
       method: 'POST',
       body: JSON.stringify(data),
@@ -11,7 +14,7 @@ const dataApi = (data) => {
 }
 
 const listProjectsApi = () => {
-  return fetch('https://proyectos-molones-team-6.onrender.com/api/projects/all')
+  return fetch(`${serverUrl}/api/projects/all`)
     .then(response => response.json())
     .then(data => {
       return data.projects;
