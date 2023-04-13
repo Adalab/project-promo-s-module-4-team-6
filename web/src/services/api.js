@@ -1,5 +1,5 @@
 const serverPort = process.env.PORT || 4001;
-const serverUrl = process.env.NODE_ENV === 'production' ? 'https://proyectos-molones-team-6.onrender.com/' : `http://localhost:${serverPort}`;
+const serverUrl = process.env.NODE_ENV === 'production' ? 'https://proyectos-molones-team-6.onrender.com' : `http://localhost:${serverPort}`;
 
 console.log('-----------serverURL---------------', serverUrl)
 

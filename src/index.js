@@ -9,8 +9,8 @@ server.set('view engine', 'ejs');
 const pathServerPublicStyles = './src/public-css';
 server.use(express.static(pathServerPublicStyles));
 
-const serverPort = process.env.PORT || 4001;
-const serverUrl = process.env.NODE_ENV === 'production' ? 'https://proyectos-molones-team-6.onrender.com/' : `http://localhost:${serverPort}`;
+const serverPort = process.env.PORT || 4000;
+const serverUrl = process.env.NODE_ENV === 'production' ? 'https://proyectos-molones-team-6.onrender.com' : `http://localhost:${serverPort}`;
 
 //Documentación de API
 const swaggerUi = require('swagger-ui-express');
